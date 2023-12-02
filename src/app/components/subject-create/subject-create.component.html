@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="create-container">
+    <h2 class="section-title">Create New Subject</h2>
+    <hr>
+    <br>
+    <form (submit)="createSubject()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="subject.name" name="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="subject.description" name="description" class="form-control"></textarea>
+      </div>
+      <button class="create-button" type="submit"><i class="fas fa-save"></i> &nbsp; Save</button>
+      &nbsp;
+      <button class="cancel-button" routerLink="/subjects"><i class="fa-solid fa-x"></i> &nbsp; Cancel</button>
+    </form>
+  </div>
+</div>
+  

@@ -1,0 +1,33 @@
+
+
+<div class="container">
+  <app-teachers-navbar></app-teachers-navbar>
+<br>
+<br> 
+    <a class="create-button" routerLink="/subjects/create"><i class="fa-solid fa-plus"></i></a>
+    <br>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subject of subjects">
+          <td>{{ subject.id }}</td>
+          <td>{{ subject.name }}</td>
+          <td>{{ subject.description }}</td>
+          <td>
+            <a class="button" routerLink="/subjects/update/{{ subject.id }}"><i class="fas fa-edit"></i></a>
+            &nbsp; 
+            <a class="button" (click)="deleteSubject(subject.id)"><i class="fas fa-trash" style="color: red;"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
